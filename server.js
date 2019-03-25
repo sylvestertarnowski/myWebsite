@@ -12,6 +12,10 @@ mongoose.connect(mongoDB, {useNewUrlParser: true});
 
 app.listen(port, () => console.log(`Listening on port ${port}`));
 
+app.post('/save_words', (req, res) => {
+
+});
+
 app.get('/express_backend', (req, res) => {
     res.send({express: 'YOUR EXPRESS BACKEND IS CONNECTED TO REACT' });
 });
