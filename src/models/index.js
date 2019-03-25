@@ -1,13 +1,13 @@
-import mongoose from 'mongoose';
+// import mongoose from 'mongoose';
 
-import Words from './words';
+// import Words from './words';
 
-const connectDb = () => {
-    return mongoose.connect(process.env.DATABASE_URL);
-};
+// const connectDb = () => {
+//     return mongoose.connect(process.env.DATABASE_URL);
+// };
 
-const models = { Words };
+// const models = { Words };
 
-export { connectDb };
+// export { connectDb };
 
-export default models;
+// export default models;
