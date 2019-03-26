@@ -6,6 +6,8 @@ const bodyParser = require('body-parser');
 const app = express();
 const port = process.env.PORT || 5000;
 
+const WordsRouter = require('./WordsRouter');
+
 //database connect
 const mongoDB = 'mongodb://localhost:27017/myWebsite'
 mongoose.set('useCreateIndex', true);
@@ -17,9 +19,7 @@ mongoose.connect(mongoDB, {useNewUrlParser: true})
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({ extended: true }));
 
-app.post('/save_words', (req, res) => {
-    
-});
+app.use('/words', WordsRouter);
 
 app.get('/express_backend', (req, res) => {
     res.send({express: 'YOUR EXPRESS BACKEND IS CONNECTED TO REACT' });

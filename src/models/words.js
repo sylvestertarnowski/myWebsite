@@ -1,4 +1,4 @@
-import mongoose from 'mongoose';
+const mongoose = require('mongoose');
 
 const listSchema = new mongoose.Schema({
     word: String,
@@ -6,7 +6,6 @@ const listSchema = new mongoose.Schema({
 });
 
 const wordsSchema = new mongoose.Schema({
-    createdAt: Date,
     name: {
         type: String,
         unique: true
@@ -15,7 +14,4 @@ const wordsSchema = new mongoose.Schema({
     list: [[listSchema]]
 });
 
-
-const WordsModel = mongoose.model('WordsModel', wordsSchema);
-
-export default WordsModel;
+module.exports = mongoose.model('Words', wordsSchema);
