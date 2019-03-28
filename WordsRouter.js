@@ -14,4 +14,17 @@ WordsRouter.route('/add').post(function (req, res) {
          });
 });
 
+WordsRouter.route('/default').get(function (req, res) {
+    Words.findOne().exec((err, wordsEntry) => {
+        if (err) {
+            console.log('There was an error retreiving data, here is error: ' + err);
+            return handleError(err);
+        }
+        if (wordsEntry) {
+            console.log(wordsEntry);
+            return res.send(wordsEntry);
+        }
+    })
+})
+
 module.exports = WordsRouter;
