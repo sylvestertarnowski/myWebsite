@@ -1,3 +1,30 @@
+* {
+    margin: 0;
+}
+
 html {
-    background: green;
+    background: rgb(224, 224, 224);
+    margin: 0;
+}
+
+.navbar {
+    display: flex;
+    border: 2px solid red;
+    flex: auto;
+    flex-direction: row;
+    background: rgb(79, 125, 179);
+}
+
+.navbar .item {
+    flex-basis: auto;
+    display: flex;
+    flex-direction: column;
+    border: 1px dashed black;
+    padding: 0 8px 0 8px;
+    min-height: 40px;
+    justify-content: center;
+    align-content: center;
+}
+
+.navbar #home {
 }
