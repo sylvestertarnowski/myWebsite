@@ -2,16 +2,23 @@
 <html>
     <head>
         <title>My website</title>
+        <link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet">
         <link rel="stylesheet" href="/css/style.css">
     </head>
     <body>
-        <!-- Header -->
-        <% include ./partials/navbar %>
+        <div class="grid-container">
+            <!-- Header -->
+            <% include ./partials/navbar %>
 
-        <!-- Main Body -->
-        <h1>Hello World!</h1>
+            <!-- Main Body -->
+            <div class="body">
+                <% include ./partials/about%>
+                <% include ./partials/projects%>
+                <% include ./partials/contact%>
+            </div>
 
-        <!-- Footer -->
-        <% include ./partials/footer %>
+            <!-- Footer -->
+            <% include ./partials/footer %>
+        </div>
     </body>
 </html>

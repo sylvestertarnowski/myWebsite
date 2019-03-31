@@ -3,28 +3,59 @@
 }
 
 html {
-    background: rgb(224, 224, 224);
+    background: #ffffff;
     margin: 0;
+    font-family: 'Roboto', sans-serif;
 }
 
 .navbar {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    font-size: 15px;
+    color: #ffffff;
     display: flex;
-    border: 2px solid red;
     flex: auto;
     flex-direction: row;
-    background: rgb(79, 125, 179);
+    background: #00363a;
 }
+
+.body {
+    margin-top: 40px;
+}
+
+.navbar a {
+    text-decoration: none;
+    color: inherit;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    height: 100%;
+}
+
+.navbar a:hover {
+    background: #006064;
+}
+
 
 .navbar .item {
     flex-basis: auto;
     display: flex;
     flex-direction: column;
-    border: 1px dashed black;
-    padding: 0 8px 0 8px;
     min-height: 40px;
+    min-width: 80px;
     justify-content: center;
     align-content: center;
 }
 
-.navbar #home {
+.navbar .about {
+    margin-left: auto;
+}
+
+.body-item {
+    min-height: 800px;
+    margin: 10% 10% 0 10%;
+    padding-top: 50px;
+    background: #005f63;
 }
