@@ -20,13 +20,13 @@ app.use(bodyParser.urlencoded({ extended: true }));
 app.set('views', path.join(__dirname, 'views'));
 app.set('view engine', 'ejs');
 app.use(express.static('public'));
-app.use('/static', express.static(__dirname + '/apps/words-learning-app/static'));
+app.use(express.static(__dirname + '/apps/words-learning-app'));
 
 // < --- routes --- >
 app.use('/words', WordsRouter);
 
 app.get('/words-learning-app', (req, res) => {
-    res.sendFile(path.join(__dirname, 'apps/words-learning-app', 'index.html'));
+    res.sendFile(path.join(__dirname, 'apps/words-learning-app', 'main.html'));
 })
 
 app.get('/express_backend', (req, res) => {
