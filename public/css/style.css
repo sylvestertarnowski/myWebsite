@@ -60,3 +60,16 @@ html {
     padding-top: 50px;
     background: #005f63;
 }
+
+img {
+    max-width: 100%;
+}
+/* Projects partial styling */
+
+.projects-container {
+    display: flex;
+}
+
+.projects-item {
+    margin: 20px;
+}
