@@ -66,10 +66,27 @@ img {
 }
 /* Projects partial styling */
 
+#projects {
+    display: flex;
+    flex-direction: column;
+}
+
+.projects-title {
+    font-size: 40px;
+    display: flex;
+    justify-content: center;
+    max-height: 50px;
+}
+
 .projects-container {
     display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
 }
 
 .projects-item {
     margin: 20px;
+    min-width: 100px;
+    max-width: 300px;
 }

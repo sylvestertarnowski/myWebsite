@@ -8,6 +8,7 @@ const wordsSchema = new mongoose.Schema({
     language: String,
     list: [
         {
+            _id: Number,
             word: String,
             translation: String
         }

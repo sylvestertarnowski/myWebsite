@@ -5,6 +5,7 @@ const Words = require('./src/models/words');
 
 WordsRouter.route('/add').post(function (req, res) {
     const words = new Words(req.body);
+    console.log(words);
     words.save()
          .then(words => {
              res.json('Words added successfully');
@@ -23,6 +24,19 @@ WordsRouter.route('/default').get(function (req, res) {
         if (wordsEntry) {
             console.log(wordsEntry);
             return res.send(wordsEntry);
+        }
+    })
+})
+
+WordsRouter.route('/find').get((req, res) => {
+    Words.findOne({ 'name': 'Test' }).exec((err, entry) => {
+        if (err) {
+            console.log('There was an error trying to find the list: ' + err);
+            return handleError(err);
+        }
+        if (entry) {
+            console.log(entry);
+            return res.send(entry);
         }
     })
 })
