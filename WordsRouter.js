@@ -41,4 +41,17 @@ WordsRouter.route('/find').get((req, res) => {
     })
 })
 
+WordsRouter.route('/all').get((req, res) => {
+    Words.find({}).exec((err, data) => {
+        if (err) {
+            console.log('There was an error trying to find the list: ' + err);
+            return handleError(err);
+        }
+        if (data) {
+            console.log(data);
+            return res.send(data);
+        }
+    })
+})
+
 module.exports = WordsRouter;
