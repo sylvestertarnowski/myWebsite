@@ -28,8 +28,8 @@ WordsRouter.route('/default').get(function (req, res) {
     })
 })
 
-WordsRouter.route('/find').get((req, res) => {
-    Words.findOne({ 'name': 'Test' }).exec((err, entry) => {
+WordsRouter.route('/find').post((req, res) => {
+    Words.findOne(req.body).exec((err, entry) => {
         if (err) {
             console.log('There was an error trying to find the list: ' + err);
             return handleError(err);
