@@ -49,7 +49,7 @@ WordsRouter.route('/delete').delete((req, res) => {
         }
         if (entry) {
             console.log(`${entry} deleted successfuly.`);
-            return res.send(`The list "${req.query.name}" was deleted succesfully!`)
+            return res.send(JSON.stringify("The list " + req.query.name + " was deleted succesfully!"));
         }
     })
 })
