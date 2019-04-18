@@ -92,3 +92,14 @@ img {
     min-width: 100px;
     max-width: 300px;
 }
+
+/* Footer */
+
+.footer {
+    display: flex;
+    justify-content: space-around;
+}
+
+.footer-item {
+    padding: 20px;
+}
