@@ -27,11 +27,15 @@ app.use('/words', WordsRouter);
 
 app.get('/words-learning-app', (req, res) => {
     res.sendFile(path.join(__dirname, 'apps/words-learning-app', 'main.html'));
-})
+});
 
 app.get('/todo-app', (req, res) => {
     res.sendFile(path.join(__dirname, 'apps/todo-app', 'todo-app.html'));
-})
+});
+
+app.get('/color-game', (req, res) => {
+    res.sendFile(path.join(__dirname, 'apps/color-game', 'colorGame.html'));
+});
 
 app.get('/express_backend', (req, res) => {
     res.send({express: 'YOUR EXPRESS BACKEND IS CONNECTED TO REACT' });
