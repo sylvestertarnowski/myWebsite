@@ -107,7 +107,15 @@ img {
 }
 
 .footer-item {
+    display: flex;
+    flex-direction: column;
+    justify-items: center;
     padding: 20px;
+}
+
+.footer-item div {
+    text-align: center;
+    padding: 5px;
 }
 
 /* Contact*/
