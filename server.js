@@ -21,6 +21,7 @@ app.set('views', path.join(__dirname, 'views'));
 app.set('view engine', 'ejs');
 app.use(express.static('public'));
 app.use(express.static(__dirname + '/apps/words-learning-app'));
+app.use(express.static(__dirname + '/apps/calculator-app'));
 
 // < --- routes --- >
 app.use('/words', WordsRouter);
@@ -35,6 +36,10 @@ app.get('/todo-app', (req, res) => {
 
 app.get('/color-game', (req, res) => {
     res.sendFile(path.join(__dirname, 'apps/color-game', 'colorGame.html'));
+});
+
+app.get('/calculator-app', (req, res) => {
+    res.sendFile(path.join(__dirname, 'apps/calculator-app', 'calculator-app.html'));
 });
 
 app.get('/express_backend', (req, res) => {
