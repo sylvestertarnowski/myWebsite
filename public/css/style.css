@@ -71,6 +71,51 @@ img {
     max-width: 100%;
 }
 
+/* About */
+
+.body-main-header {
+    margin-top: 20px;
+}
+
+#name-surname {
+    font-size: 36px;
+    text-align: center;
+}
+
+#name-title {
+    font-size: 28px;
+    text-align: center;
+    font-style: italic;
+}
+
+.body-bio {
+    margin: 10px 20px;
+    max-width: 600px;
+}
+
+.body-main {
+    display: grid;
+    justify-items: center;
+}
+
+.skills-table {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    align-items: space-around;
+    margin-top: 20px;
+}
+
+.skills-table-row {
+    display: flex;
+    flex-direction: column;
+    margin: 2px 20px;
+}
+
+.skills-table-row span {
+    padding: 5px;
+}
+
+
 /* Projects partial styling */
 
 #projects {
@@ -97,6 +142,11 @@ img {
     flex-basis: 300px;
     flex-grow: 1;
     max-width: 400px;
+}
+
+.projects-item h2 {
+    text-align: center;
+    padding: 5px 0;
 }
 
 /* Footer */

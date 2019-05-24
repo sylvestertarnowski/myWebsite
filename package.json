@@ -11,10 +11,12 @@
     "mongoose": "^5.4.19",
     "react": "^16.8.4"
   },
-  "devDependencies": {},
+  "devDependencies": {
+    "nodemon": "^1.19.0"
+  },
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "start": "node -r esm server.js"
+    "start": "nodemon -r esm server.js"
   },
   "author": "",
   "license": "ISC"

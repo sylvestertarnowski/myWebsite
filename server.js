@@ -22,9 +22,14 @@ app.set('view engine', 'ejs');
 app.use(express.static('public'));
 app.use(express.static(__dirname + '/apps/words-learning-app'));
 app.use(express.static(__dirname + '/apps/calculator-app'));
+app.use(express.static(__dirname + '/apps/hotree'));
 
 // < --- routes --- >
 app.use('/words', WordsRouter);
+
+app.get('/hotree', (req, res) => {
+    res.sendFile(path.join(__dirname, 'apps/hotree', 'hotree.html'));
+});
 
 app.get('/words-learning-app', (req, res) => {
     res.sendFile(path.join(__dirname, 'apps/words-learning-app', 'main.html'));
