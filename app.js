@@ -4,7 +4,7 @@ const bodyParser  = require('body-parser');
 const path        = require('path');
 const WordsRouter = require('./WordsRouter');
 const app         = express();
-const port        = process.env.PORT || 5000;
+const port        = process.env.PORT || 3000;
 
 // < --- database connect --- >
 const mongoDB = 'mongodb://localhost:27017/myWebsite'
