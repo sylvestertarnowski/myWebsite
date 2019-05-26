@@ -23,7 +23,6 @@ app.use(express.static(__dirname + '/apps/calculator-app'));
 app.use(express.static(__dirname + '/apps/hotree'));
 
 // < --- routes --- >
-app.use('/words', WordsRouter);
 
 app.get('/hotree', (req, res) => {
     res.sendFile(path.join(__dirname, 'apps/hotree', 'hotree.html'));
