@@ -2,7 +2,6 @@ const express     = require('express');
 const mongoose    = require('mongoose');
 const bodyParser  = require('body-parser');
 const path        = require('path');
-const WordsRouter = require('./WordsRouter');
 const app         = express();
 const port        = process.env.PORT || 3000;
 
@@ -20,7 +19,6 @@ app.use(bodyParser.urlencoded({ extended: true }));
 app.set('views', path.join(__dirname, 'views'));
 app.set('view engine', 'ejs');
 app.use(express.static('public'));
-app.use(express.static(__dirname + '/apps/words-learning-app'));
 app.use(express.static(__dirname + '/apps/calculator-app'));
 app.use(express.static(__dirname + '/apps/hotree'));
 
@@ -29,10 +27,6 @@ app.use('/words', WordsRouter);
 
 app.get('/hotree', (req, res) => {
     res.sendFile(path.join(__dirname, 'apps/hotree', 'hotree.html'));
-});
-
-app.get('/words-learning-app', (req, res) => {
-    res.sendFile(path.join(__dirname, 'apps/words-learning-app', 'main.html'));
 });
 
 app.get('/todo-app', (req, res) => {
@@ -45,10 +39,6 @@ app.get('/color-game', (req, res) => {
 
 app.get('/calculator-app', (req, res) => {
     res.sendFile(path.join(__dirname, 'apps/calculator-app', 'calculator-app.html'));
-});
-
-app.get('/express_backend', (req, res) => {
-    res.send({express: 'YOUR EXPRESS BACKEND IS CONNECTED TO REACT' });
 });
 
 app.get('/', (req, res) => {
