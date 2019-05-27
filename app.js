@@ -28,6 +28,10 @@ app.get('/hotree', (req, res) => {
     res.sendFile(path.join(__dirname, 'apps/hotree', 'hotree.html'));
 });
 
+app.get('/patatap-clone', (req, res) => {
+    res.sendFile(path.join(__dirname, 'apps/patatap-clone', 'patatap-clone.html'));
+});
+
 app.get('/todo-app', (req, res) => {
     res.sendFile(path.join(__dirname, 'apps/todo-app', 'todo-app.html'));
 });
