@@ -21,11 +21,16 @@ app.set('view engine', 'ejs');
 app.use(express.static('public'));
 app.use(express.static(__dirname + '/apps/calculator-app'));
 app.use(express.static(__dirname + '/apps/hotree'));
+app.use(express.static(__dirname + '/apps/alpaka-dance'));
 
 // < --- routes --- >
 
 app.get('/hotree', (req, res) => {
     res.sendFile(path.join(__dirname, 'apps/hotree', 'hotree.html'));
+});
+
+app.get('/alpaka-dance', (req, res) => {
+    res.sendFile(path.join(__dirname, 'apps/alpaka-dance', 'alpaka-dance.html'));
 });
 
 app.get('/patatap-clone', (req, res) => {
