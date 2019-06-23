@@ -21,12 +21,16 @@ app.set('view engine', 'ejs');
 app.use(express.static('public'));
 app.use(express.static(__dirname + '/apps/calculator-app'));
 app.use(express.static(__dirname + '/apps/hotree'));
+app.use(express.static(__dirname + '/apps/custom-tailored-doors'));
 app.use(express.static(__dirname + '/apps/alpaka-dance'));
 
 // < --- routes --- >
 
 app.get('/hotree', (req, res) => {
     res.sendFile(path.join(__dirname, 'apps/hotree', 'hotree.html'));
+});
+app.get('/custom-tailored-doors', (req, res) => {
+    res.sendFile(path.join(__dirname, 'apps/custom-tailored-doors', 'custom-tailored-doors.html'));
 });
 
 app.get('/alpaka-dance', (req, res) => {
